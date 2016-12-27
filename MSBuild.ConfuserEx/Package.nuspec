@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$id$</title>
+    <authors>$author$</authors>
+    <owners>Enner Pérez</owners>
+    <licenseUrl>https://raw.githubusercontent.com/yck1509/ConfuserEx/master/LICENSE</licenseUrl>
+    <projectUrl>https://nuget.org/packages/Confuser.Targets</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/yck1509/ConfuserEx/master/ConfuserEx/ConfuserEx.ico</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <description>Build targets interface of ConfuserEx</description>
+    <summary>$description$</summary>
+    <releaseNotes>
+      Includes 'ConfuserEx' v1.0.0 in a solution-level NuGet package
+    </releaseNotes>
+    <copyright>$copyright$</copyright>
+    <language>en</language>
+    <tags>ConfuserEx MSBuild Targets</tags>
+    <dependencies>
+      <dependency id="ConfuserEx.Final" version="1.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="build\" target="build" />
+    <file src="content\" target="content" />
+  </files>
+</package>
