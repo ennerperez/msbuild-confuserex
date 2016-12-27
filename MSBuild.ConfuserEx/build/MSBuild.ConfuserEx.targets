@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ***********************************************************************************************
-Confuser.Build.targets
+MSBuild.ConfuserEx.targets
 
 WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
           created a backup copy.  Incorrect changes to this file will make it
@@ -9,7 +9,7 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
 
 ***********************************************************************************************
 -->
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
 
@@ -47,7 +47,7 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
     <Error Condition="'$(DownloadConfuserExe)' != 'true' AND !Exists('$(ConfuserExePath)')" Text="Unable to locate '$(ConfuserExePath)'" />
   </Target>
 
-  <Target Name="Confuser" AfterTargets="PostBuildEvent" DependsOnTargets="CheckPrerequisites" Condition="Exists('$(ProjectFileName)') and '$(ConfigurationName)' == 'Release'" >
+  <Target Name="Confuser" AfterTargets="AfterBuild" DependsOnTargets="CheckPrerequisites" Condition="Exists('$(ProjectFileName)') and '$(ConfigurationName)' == 'Release'" >
     <MakeDir Directories="$(TargetDir)confused"/>
     <Exec WorkingDirectory="$(ProjectDir)" Command="$(ConfuseCommand)" />
     <ItemGroup>
