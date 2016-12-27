@@ -1,6 +1,6 @@
-ConfuserEx.Build
+MSBuild.ConfuserEx
 ========
-ConfuserEx.Build is a target for ConfuserEx integration in build process.
+MSBuild.ConfuserEx is a target for ConfuserEx integration in MSBuild process.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/melev7x8iigtmryx?svg=true)](https://ci.appveyor.com/project/ennerperez/confuserex)
 
