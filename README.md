@@ -2,7 +2,7 @@ MSBuild.ConfuserEx
 ========
 MSBuild.ConfuserEx is a target for ConfuserEx integration in MSBuild process.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/melev7x8iigtmryx?svg=true)](https://ci.appveyor.com/project/ennerperez/confuserex)
+[![Build status](https://ci.appveyor.com/api/projects/status/ttwbutio7e2dwptb?svg=true)](https://ci.appveyor.com/project/ennerperez/msbuild-confuserex)
 
 ConfuserEx
 ========
