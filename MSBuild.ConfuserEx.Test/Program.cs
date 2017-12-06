@@ -9,6 +9,9 @@ namespace MSBuild.ConfuserEx.Test
     {
         static void Main(string[] args)
         {
+            var message = "You can't read this!";
+            Console.WriteLine(message);
+            Console.ReadKey();
         }
     }
 }
