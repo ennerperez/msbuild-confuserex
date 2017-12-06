@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://confuser.codeplex.com" baseDir="bin\Release" outputDir="confused">
-  
-  
-<rule pattern="true" preset="aggressive" /><module path="MSBuild.ConfuserEx.Test.exe" /></project>
+  <rule pattern="true" preset="aggressive" />
+  <module path="MSBuild.ConfuserEx.Test.exe" />
+</project>

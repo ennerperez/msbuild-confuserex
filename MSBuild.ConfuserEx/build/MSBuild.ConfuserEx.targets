@@ -15,6 +15,7 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
 
     <!-- ConfuserToolsPath -->
     <ConfuserToolsPath>$(MSBuildThisFileDirectory)..\..\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
+    <ConfuserToolsPath Condition="!Exists('$(ConfuserToolsPath)')">$(SolutionDir)packages\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
 
   </PropertyGroup>
 
