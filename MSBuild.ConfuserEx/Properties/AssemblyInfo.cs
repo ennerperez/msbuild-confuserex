@@ -13,6 +13,6 @@ using System.Resources;
 [assembly: AssemblyCompany("Enner Pérez")]
 [assembly: AssemblyProduct("MSBuild.ConfuserEx")]
 [assembly: AssemblyCopyright("Copyright (C) Enner Pérez 2018")]
-[assembly: AssemblyVersion("1.0.1.*")]
-[assembly: AssemblyFileVersion("1.0.1")]
+[assembly: AssemblyVersion("1.0.2.*")]
+[assembly: AssemblyFileVersion("1.0.2")]
 [assembly: NeutralResourcesLanguage("en")]
