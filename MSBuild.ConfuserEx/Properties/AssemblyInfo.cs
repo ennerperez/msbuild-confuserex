@@ -10,10 +10,9 @@ using System.Resources;
 #else
 [assembly: AssemblyConfiguration("RELEASE")]
 #endif
-[assembly: AssemblyCompany("yck1509")]
+[assembly: AssemblyCompany("Enner Pérez")]
 [assembly: AssemblyProduct("MSBuild.ConfuserEx")]
-[assembly: AssemblyCopyright("Copyright (C) Ki 2014")]
-
-[assembly: AssemblyVersion("1.0.0.*")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyCopyright("Copyright (C) Enner Pérez 2018")]
+[assembly: AssemblyVersion("1.0.2.*")]
+[assembly: AssemblyFileVersion("1.0.2")]
 [assembly: NeutralResourcesLanguage("en")]
