@@ -14,8 +14,11 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
   <PropertyGroup>
 
     <!-- ConfuserToolsPath -->
-    <ConfuserToolsPath>$(MSBuildThisFileDirectory)..\..\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
-    <ConfuserToolsPath Condition="!Exists('$(ConfuserToolsPath)')">$(SolutionDir)packages\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
+    <ConfuserToolsPath Condition="'$(NuGetProjectStyle)' == 'PackageReference'">$(MSBuildThisFileDirectory)..\..\..\ConfuserEx.Final\1.0.0\tools</ConfuserToolsPath>
+    <ConfuserToolsPath Condition="'$(NuGetProjectStyle)' == 'PackageReference' And !Exists('$(ConfuserToolsPath)')">$(NuGetPackageRoot)ConfuserEx.Final\1.0.0\tools</ConfuserToolsPath>
+
+    <ConfuserToolsPath Condition="'$(NuGetProjectStyle)' != 'PackageReference'">$(MSBuildThisFileDirectory)..\..\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
+    <ConfuserToolsPath Condition="'$(NuGetProjectStyle)' != 'PackageReference' And !Exists('$(ConfuserToolsPath)')">$(SolutionDir)packages\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
 
   </PropertyGroup>
 
@@ -37,7 +40,7 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
 
     <ProjectFileName Condition=" '$(OS)' != 'Windows_NT' ">$(ProjectDir)$(ProjectName).crproj</ProjectFileName>
     <ProjectFileName Condition=" '$(OS)' != 'Windows_NT' AND !Exists('$(ProjectFileName)')">$(ProjectDir)Confuser.crproj</ProjectFileName>
-    
+
     <!-- Commands -->
     <ConfuseCommand>$(ConfuserCommand) "$(ProjectFileName)"</ConfuseCommand>
 
@@ -57,5 +60,5 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
     <Move SourceFiles="@(FilesToMove)" DestinationFolder="$(TargetDir)" OverwriteReadOnlyFiles="true" Condition=" '$(OS)' == 'Windows_NT'" />
     <RemoveDir Directories="$(TargetDir)confused" Condition=" '$(OS)' == 'Windows_NT'" />
   </Target>
-  
+
 </Project>
