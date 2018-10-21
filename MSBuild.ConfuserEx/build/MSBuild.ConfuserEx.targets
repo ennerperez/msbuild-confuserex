@@ -19,7 +19,6 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
 
     <ConfuserToolsPath Condition="'$(NuGetProjectStyle)' != 'PackageReference'">$(MSBuildThisFileDirectory)..\..\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
     <ConfuserToolsPath Condition="'$(NuGetProjectStyle)' != 'PackageReference' And !Exists('$(ConfuserToolsPath)')">$(SolutionDir)packages\ConfuserEx.Final.1.0.0\tools</ConfuserToolsPath>
-
   </PropertyGroup>
 
   <PropertyGroup>
@@ -43,7 +42,6 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
 
     <!-- Commands -->
     <ConfuseCommand>$(ConfuserCommand) "$(ProjectFileName)"</ConfuseCommand>
-
   </PropertyGroup>
 
   <Target Name="CheckPrerequisites">
@@ -51,14 +49,13 @@ WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and
     <Error Condition="'$(DownloadConfuserExe)' != 'true' AND !Exists('$(ConfuserExePath)')" Text="Unable to locate '$(ConfuserExePath)'" />
   </Target>
 
-  <Target Name="Confuser" AfterTargets="AfterBuild" DependsOnTargets="CheckPrerequisites" Condition="Exists('$(ProjectFileName)') and '$(ConfigurationName)' == 'Release'" >
-    <MakeDir Directories="$(TargetDir)confused"/>
+  <Target Name="Confuser" AfterTargets="AfterBuild" DependsOnTargets="CheckPrerequisites" Condition="Exists('$(ProjectFileName)') and '$(ConfigurationName)' == 'Release'">
+    <MakeDir Directories="$(TargetDir)confused" />
     <Exec WorkingDirectory="$(ProjectDir)" Command="$(ConfuseCommand)" />
     <ItemGroup>
-      <FilesToMove Include="$(TargetDir)confused\*.*"/>
+      <FilesToMove Include="$(TargetDir)confused\*.*" />
     </ItemGroup>
     <Move SourceFiles="@(FilesToMove)" DestinationFolder="$(TargetDir)" OverwriteReadOnlyFiles="true" Condition=" '$(OS)' == 'Windows_NT'" />
     <RemoveDir Directories="$(TargetDir)confused" Condition=" '$(OS)' == 'Windows_NT'" />
   </Target>
-
 </Project>

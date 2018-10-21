@@ -6,9 +6,9 @@
     <title>$id$</title>
     <authors>Enner Pérez</authors>
     <owners>Enner Pérez</owners>
-    <licenseUrl>https://raw.githubusercontent.com/yck1509/ConfuserEx/master/LICENSE</licenseUrl>
-    <projectUrl>https://nuget.org/packages/Confuser.Targets</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/yck1509/ConfuserEx/master/ConfuserEx/ConfuserEx.ico</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/ennerperez/msbuild-confuserex/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ennerperez/msbuild-confuserex</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/ennerperez/msbuild-confuserex/master/.editoricon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
     <description>Build targets interface of ConfuserEx</description>
